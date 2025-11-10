@@ -19,7 +19,7 @@ disable=raw-checker-failed,
 
 [FORMAT]
 
-max-line-length=800
+max-line-length=80
 
 indent-string='    '
 
@@ -32,5 +32,3 @@ max-nested-blocks=2
 max-args=4
 
 max-statements=10
-
-max-attributes=7
