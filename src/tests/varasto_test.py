@@ -72,6 +72,11 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(negatiivinen_varasto.saldo, 0)
 
+    def test_konstruktori_alku_saldo_suurempi_kuin_tilavuus_tayttaa_varaston(self):
+        varasto = Varasto(10, 15)
+
+        self.assertAlmostEqual(varasto.saldo, 10)
+
     def test_str_metodi_toimii_oikein(self):
         # Tyhjä varasto
         self.assertEqual(str(self.varasto), "saldo = 0, vielä tilaa 10")
