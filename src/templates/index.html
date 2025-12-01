@@ -5,44 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohtuvarasto - Warehouse Management</title>
     <style>
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-section: white;
+            --bg-warehouse: #fafafa;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-heading: #2c3e50;
+            --border-color: #ddd;
+            --input-bg: white;
+            --shadow-color: rgba(0,0,0,0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1a1a2e;
+                --bg-section: #16213e;
+                --bg-warehouse: #0f3460;
+                --text-primary: #e8e8e8;
+                --text-secondary: #b8b8b8;
+                --text-heading: #94d2bd;
+                --border-color: #3a3a5a;
+                --input-bg: #2a2a4a;
+                --shadow-color: rgba(0,0,0,0.3);
+            }
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
         }
         h1 {
-            color: #333;
+            color: var(--text-primary);
+        }
+        h2 {
+            color: var(--text-primary);
         }
         .section {
-            background-color: white;
+            background-color: var(--bg-section);
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px var(--shadow-color);
         }
         .warehouse {
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-color);
             padding: 15px;
             margin-bottom: 15px;
             border-radius: 4px;
-            background-color: #fafafa;
+            background-color: var(--bg-warehouse);
         }
         .warehouse h3 {
             margin-top: 0;
-            color: #2c3e50;
+            color: var(--text-heading);
         }
         .warehouse-info {
             margin-bottom: 10px;
-            color: #666;
+            color: var(--text-secondary);
         }
         input[type="text"],
         input[type="number"] {
             padding: 8px;
             margin: 5px 5px 5px 0;
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-color);
             border-radius: 4px;
+            background-color: var(--input-bg);
+            color: var(--text-primary);
+        }
+        input::placeholder {
+            color: var(--text-secondary);
         }
         button {
             padding: 8px 16px;
@@ -76,6 +111,7 @@
         label {
             display: inline-block;
             width: 80px;
+            color: var(--text-primary);
         }
     </style>
 </head>
